@@ -1,43 +1,49 @@
+
 public class EjemploThreadGroupBreve {
 
+    // Objeto usado como monitor para sincronizar los hilos
     private static final Object monitor = new Object();
+    // Variable compartida para indicar si hay una tarea lista
     private static boolean tareaDisponible = false;
 
-    //Metodo main
     public static void main(String[] args) {
 
-        // Crear un grupo de hilos
+        // Crear un grupo de hilos con nombre "GrupoEjemplo"
         ThreadGroup grupo = new ThreadGroup("GrupoEjemplo");
-        // Crear e iniciar hilos dentro del grupo
+
+        // Crear e iniciar 3 hilos dentro del grupo
         for (int i = 1; i <= 3; i++) {
             new Thread(grupo, new Tarea(), "Hilo " + i).start();
         }
 
-        // Simular preparación de la tarea
+        // Simular que el hilo principal prepara la tarea
         try {
-            Thread.sleep(500);
-            synchronized (monitor) {
-                tareaDisponible = true;
-                monitor.notifyAll(); // Notifica a todos los hilos
+            Thread.sleep(500); // Espera medio segundo antes de notificar
+            synchronized (monitor) { //crea una sección crítica, donde solo un hilo puede intentar entrar al bloque
+                tareaDisponible = true; // Marca la tarea como disponible
+                monitor.notifyAll(); // Despierta a todos los hilos que esperaban
                 System.out.println("Hilo principal: Tarea disponible, notificación enviada.");
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
     }
-    // Clase que representa la tarea que espera hasta ser notificada
+
+    // Clase interna que representa la tarea de cada hilo
     static class Tarea implements Runnable {
         @Override
         public void run() {
             synchronized (monitor) {
+                // Mientras no haya tarea disponible, el hilo espera
                 while (!tareaDisponible) {
                     try {
                         System.out.println(Thread.currentThread().getName() + " espera la tarea...");
-                        monitor.wait(); // Espera hasta recibir la notificación
+                        monitor.wait(); // El hilo se bloquea hasta ser notificado
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
                 }
+                // Cuando la tarea está disponible, el hilo continúa
                 System.out.println(Thread.currentThread().getName() + " ha comenzado su tarea.");
             }
         }

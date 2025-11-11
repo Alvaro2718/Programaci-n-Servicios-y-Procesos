@@ -15,10 +15,10 @@ public class Corredor implements Runnable {
     @Override
     public void run() {
         for (int i = 1; i <= NUM_ETAPAS; i++) {
+            // Cada etapa se avanza con un pequeño retardo
             System.out.println(nombre + " ha avanzado a la etapa " + i + ".");
             try {
-                // Simula tiempo de avance (ajusta a 1000 para 1 segundo por etapa)
-                Thread.sleep(100);
+                Thread.sleep(100); // Simula tiempo de avance
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 System.out.println(nombre + " fue interrumpido.");
@@ -26,11 +26,10 @@ public class Corredor implements Runnable {
             }
         }
 
-        // Registrar llegada en orden (lista sincronizada desde main)
+        // Registrar llegada en la lista sincronizada
         synchronized (metaCompartida) {
             metaCompartida.add(nombre);
         }
         System.out.println(nombre + " ha cruzado la meta.");
     }
 }
-

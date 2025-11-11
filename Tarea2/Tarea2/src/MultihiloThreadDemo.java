@@ -1,12 +1,11 @@
-public class MultihiloThreadDemo  extends Thread{
+public class MultihiloThreadDemo extends Thread {
 
     @Override
     public void run() {
-
-        try{
-            System.out.println(Thread.currentThread().getId()+ " se esta ejecutando.");
-
-        }catch(Exception e){
+        try {
+            // Muestra el ID del hilo actual cuando se está ejecutando
+            System.out.println(Thread.currentThread().getId() + " se está ejecutando.");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
