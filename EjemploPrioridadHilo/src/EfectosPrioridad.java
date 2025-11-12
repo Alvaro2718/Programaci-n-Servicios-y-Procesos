@@ -2,8 +2,13 @@ public class EfectosPrioridad {
 
     public static void main(String[] args) {
 
+<<<<<<< Updated upstream
         // Se crean hilos con todas las prioridades posibles (de 1 a 10)
         for (int i = Thread.MIN_PRIORITY; i <= Thread.MAX_PRIORITY; i++) {
+=======
+        for (int i = Thread.MIN_PRIORITY; i <= Thread.MAX_PRIORITY; i++) {
+
+>>>>>>> Stashed changes
             int prioridad = i;
 
             // Cada hilo realiza una tarea simple: incrementar un contador
