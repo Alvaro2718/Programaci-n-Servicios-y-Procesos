@@ -1,0 +1,20 @@
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
+Error: Could not find or load main class RandomGenerator
+Caused by: java.lang.ClassNotFoundException: RandomGenerator
