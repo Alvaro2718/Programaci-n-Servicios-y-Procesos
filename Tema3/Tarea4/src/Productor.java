@@ -18,12 +18,12 @@ public class Productor implements Runnable {
                 int numero = random.nextInt(100) + 1; // entre 1 y 100
                 cola.put(numero); // Si la cola está llena, espera (bloquea)
                 System.out.println(Thread.currentThread().getName() +
-                        " → generó número: " + numero);
+                        "  genero numero: " + numero);
                 Thread.sleep(500); // Simula tiempo de producción
             }
             // Señal de finalización (valor especial)
             cola.put(-1);
-            System.out.println(Thread.currentThread().getName() + " ha terminado la producción.");
+            System.out.println(Thread.currentThread().getName() + " ha terminado la produccion.");
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.out.println("Productor interrumpido.");

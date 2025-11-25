@@ -18,12 +18,12 @@ public class Consumidor implements Runnable {
                 // Señal de fin (-1)
                 if (numero == -1) {
                     System.out.println(Thread.currentThread().getName() +
-                            " → recibió señal de fin. Terminando...");
+                            "  recibio señal de fin. Terminando...");
                     break;
                 }
 
                 System.out.println(Thread.currentThread().getName() +
-                        " → procesó número: " + numero);
+                        "  proceso numero: " + numero);
 
                 Thread.sleep(800); // Simula tiempo de consumo
             }

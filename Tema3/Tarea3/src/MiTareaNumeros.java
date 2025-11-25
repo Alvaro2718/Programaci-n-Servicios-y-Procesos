@@ -5,7 +5,7 @@ public class MiTareaNumeros implements Runnable {
         try {
             // Contar del 1 al 5
             for (int i = 1; i <= 5; i++) {
-                System.out.println(Thread.currentThread().getName() + " → número: " + i);
+                System.out.println(Thread.currentThread().getName() + " numero: " + i);
                 Thread.sleep(500); // Simula trabajo (el hilo entra en estado TIMED_WAITING)
             }
         } catch (InterruptedException e) {
