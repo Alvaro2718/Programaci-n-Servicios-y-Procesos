@@ -5,7 +5,7 @@ import java.net.URL;
 
 public class FTPwithURL {
 
-
+//ESTE ARCHIVO ESTA HECHO PARA NO FUNCIONAR SOLO ERA PARA SABER EL FORMATO
     public static void main(String[] args) {
 
         String urlString = "ftp://anonymous:password@ftp.example.com/archivo.txt";

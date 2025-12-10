@@ -3,20 +3,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-public class FTPDemo {
+public class FTPLocalhost {
 
     public static void main(String[] args){
 
         //Datos del SERVIDOR FTP de prueba
-        String servidor = "test.rebex.net";
-        String usuario = "demo";
-        String password = "password";
-        String archivo = "readme.txt";
+        String servidor = "localhost";//Dirección donde está el servidor
+        String usuario = "alumno";
+        String password = "1234";
+        String archivo = "Tema5.txt";
 
         // Construir URL correctamente
-        //ftp://demo:password@test.rebex.net/readme.txt
-        //ftp://usuario:contraseña@servidor/rutaDelArchivo
-        String urlString = String.format("ftp://%s:%s@%s/%s", usuario, password, servidor, archivo);
+        String urlString = "ftp://alumno:1234@localhost/Tema5.txt";
+        //String urlString = "ftp://usuario:contraseña@servidor/rutaDelArchivo";
+        //String urlString = String.format("ftp://%s:%s@%s/%s", usuario, password, servidor, archivo);
 
         //Mostramos la URL generada
         System.out.println("URL generada: " + urlString);
@@ -46,4 +46,5 @@ public class FTPDemo {
             System.out.println("Error: " + e.getMessage());
         }
     }
+
 }
