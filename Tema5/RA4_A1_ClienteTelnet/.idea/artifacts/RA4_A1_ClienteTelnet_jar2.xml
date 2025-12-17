@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RA4_A1_ClienteTelnet:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/RA4_A1_ClienteTelnet_jar2</output-path>
+    <root id="archive" name="RA4_A1_ClienteTelnet.jar">
+      <element id="module-output" name="RA4_A1_ClienteTelnet" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Programación de Servicios(Loren)/Tema5/commons-net-3.12.0-bin (1)/commons-net-3.12.0/commons-net-3.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Programación de Servicios(Loren)/Tema5/commons-net-3.12.0-bin (1)/commons-net-3.12.0/commons-net-examples-3.12.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

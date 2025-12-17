@@ -22,7 +22,7 @@ public class URLExample {
 
             //Paso 2: Abrir una conexión y obtener un flujo de entrada (InputStream)
             try (BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()))) {
-                System.out.println("---RESPUESAT DEL SERVIDOR---");
+                System.out.println("---RESPUESTA DEL SERVIDOR---");
 
                 // PASO 4: Leer el contenido línea por línea
                 //readLine() devuelve null cuando no hay más lín
@@ -31,7 +31,7 @@ public class URLExample {
                 while ((line = br.readLine()) != null) {
                     System.out.println(line + "\n");
                 }
-                System.out.println("---FIN RESPUESAT DEL SERVIDOR---");
+                System.out.println("---FIN RESPUESTA DEL SERVIDOR---");
 
 
 
